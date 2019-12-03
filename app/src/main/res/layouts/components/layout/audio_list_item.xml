@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+                name="audio"
+                type="com.weikappinc.weikapp.adapters.audio_chooser_activity.AudioItemPreview"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootConstraintView"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+        <RadioButton
+                android:text="@{audio.name}"
+                tools:text="My life be like (ooa-uooh) Jeff Hyde Cold Spotify"
+                android:checked="@{audio.checked}"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:id="@+id/radioButton"
+                android:focusable="false"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp"
+                android:paddingStart="12dp"
+                android:paddingEnd="14dp"
+                app:layout_constraintEnd_toStartOf="@+id/frameContainer"/>
+
+        <FrameLayout
+                android:id="@+id/frameContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="35dp"
+                    app:maxImageSize="@dimen/fab_icon_size_medium"
+                    android:src="@drawable/ic_play_arrow_white_32dp"
+                    app:rippleColor="@color/colorRippleEffect"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/playAudio"
+                    app:visibleOrGone="@{!audio.isPlaying}"
+                    android:layout_marginEnd="19dp"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="35dp"
+                    app:maxImageSize="@dimen/fab_icon_size_medium"
+                    android:src="@drawable/ic_pause_accent_24dp"
+                    app:backgroundTint="@android:color/white"
+                    app:rippleColor="@color/colorRippleEffect"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/stopAudio"
+                    app:visibleOrGone="@{audio.isPlaying}"
+                    android:layout_marginEnd="19dp"/>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

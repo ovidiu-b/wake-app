@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/radius_corner_border_2"
+        app:cardBackgroundColor="@color/colorPrimaryDark_2"
+        style="@style/Widget.MaterialComponents.CardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <ToggleButton
+                android:text="1"
+                android:id="@+id/toggleDay1"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="L"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay2"
+                android:textOn="L"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ToggleButton
+                android:text="2"
+                android:id="@+id/toggleDay2"
+                style="@style/ToogleButtonAlarmDayTheme"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay1"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay3"
+                android:textOn="M"
+                android:textOff="M"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ToggleButton
+                android:text="3"
+                android:id="@+id/toggleDay3"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="W"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay2"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay4"
+                android:textOn="W"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ToggleButton
+                android:text="4"
+                android:id="@+id/toggleDay4"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="J"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay5"
+                android:textOn="J"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ToggleButton
+                android:text="5"
+                android:id="@+id/toggleDay5"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="V"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay4"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay6"
+                android:textOn="V"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ToggleButton
+                android:text="6"
+                android:id="@+id/toggleDay6"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="S"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toStartOf="@+id/toggleDay7"
+                android:textOn="S"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        <ToggleButton
+                android:text="7"
+                android:id="@+id/toggleDay7"
+                style="@style/ToogleButtonAlarmDayTheme"
+                android:textOff="D"
+                app:layout_constraintStart_toEndOf="@+id/toggleDay6"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textOn="D"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

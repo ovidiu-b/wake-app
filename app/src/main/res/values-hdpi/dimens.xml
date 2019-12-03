@@ -1,0 +1,5 @@
+<resources>
+	<dimen name="radius_corner_border_1">3.6dp</dimen>
+	<dimen name="radius_corner_border_2">2.4dp</dimen>
+	<dimen name="numberpicker_height_size">2</dimen>
+</resources>

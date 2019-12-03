@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/colorPrimaryDark</color>
+    <color name="colorPrimaryDark">#171738</color>
+    <color name="colorPrimaryDark_2">#121229</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccentLight">#88D81B60</color>
+    <color name="navigationBarColor">@color/colorAccent</color>
+
+    <color name="colorBlackLight">#181717</color>
+
+    <color name="colorSecondary">#35393C</color>
+
+    <color name="colorGrayLight_1">#BA969696</color>
+    <color name="colorGrayDark">#BA6F6D6D</color>
+    <color name="colorGrayTransparent">#256D6C6C</color>
+
+    <color name="colorRippleEffect">#22FFFFFF</color>
+
+    <color name="colorSlightlyWhite">#B9F1F1F1</color>
+</resources>

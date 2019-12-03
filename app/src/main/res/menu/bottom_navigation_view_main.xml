@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+            android:id="@+id/action_alarms"
+            android:enabled="true"
+            android:icon="@drawable/ic_alarm_white_18dp"
+            android:title="@string/action_alarms_title"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/action_social"
+            android:enabled="true"
+            android:icon="@drawable/ic_group_white_18dp"
+            android:title="@string/action_social_title"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/action_messages"
+            android:enabled="true"
+            android:icon="@drawable/ic_mail_white_18dp"
+            android:title="@string/action_messages_title"
+            app:showAsAction="ifRoom" />
+    <item
+            android:id="@+id/action_settings"
+            android:enabled="true"
+            android:icon="@drawable/ic_settings_white_18dp"
+            android:title="@string/action_settings_title"
+            app:showAsAction="ifRoom" />
+</menu>

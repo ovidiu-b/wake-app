@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <dimen name="radius_corner_border_1">3dp</dimen>
+    <dimen name="radius_corner_border_2">2dp</dimen>
+
+    <!--Se sobreescriben los valores por defecto-->
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">11sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">11sp</dimen>
+
+    <!--Tamaño de los iconos de la barra inferior-->
+    <dimen name="bottom_navigation_view_icon_size">24dp</dimen>
+
+    <!--TYPOGRAHPY-->
+    <dimen name="big_text">36sp</dimen>
+    <dimen name="heading_1">18.5sp</dimen>
+    <dimen name="heading_2">16sp</dimen>
+    <dimen name="heading_3">15sp</dimen>
+    <dimen name="default_font_size">13sp</dimen>
+    <dimen name="low_text">12sp</dimen>
+
+    <!--SPACES (PADDINGS, MARGINS, ELEVATIONS, etc)-->
+    <dimen name="elevation_big">16dp</dimen>
+    <dimen name="elevation_medium">12dp</dimen>
+    <dimen name="elevation_small">6dp</dimen>
+    <dimen name="space_between_fab_app_bot_bar">8dp</dimen>
+
+    <!--SIZES-->
+    <dimen name="fab_icon_size_big">32dp</dimen>
+    <dimen name="fab_icon_size_medium">22dp</dimen>
+    <dimen name="scrollbar_size">3dp</dimen>
+    <dimen name="padding_bottom_recyclerview_with_fab">95dp</dimen>
+    <dimen name="margin_bottom_end_fab">19dp</dimen>
+    <dimen name="recyclerview_item_height">85dp</dimen>
+    <dimen name="circle_image_size">60dp</dimen>
+    <dimen name="numberpicker_height_size">1.9</dimen>
+</resources>

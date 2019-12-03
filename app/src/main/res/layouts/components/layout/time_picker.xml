@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/radius_corner_border_2"
+        app:cardBackgroundColor="@color/colorPrimaryDark_2"
+        style="@style/Widget.MaterialComponents.CardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <NumberPicker
+                android:id="@+id/hourPicker"
+                android:layout_width="30dp"
+                android:layout_height="70dp"
+                android:theme="@style/DefaultNumberPickerTheme"
+                android:scaleX="@dimen/numberpicker_height_size"
+                android:scaleY="@dimen/numberpicker_height_size"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintEnd_toStartOf="@+id/textView4"
+                android:layout_marginEnd="24dp"/>
+        <NumberPicker
+                android:id="@+id/minutePicker"
+                android:layout_width="30dp"
+                android:layout_height="70dp"
+                android:theme="@style/DefaultNumberPickerTheme"
+                android:scaleX="@dimen/numberpicker_height_size"
+                android:scaleY="@dimen/numberpicker_height_size"
+                app:layout_constraintTop_toTopOf="@+id/textView4"
+                app:layout_constraintBottom_toBottomOf="@+id/textView4"
+                app:layout_constraintVertical_bias="0.496"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                android:layout_marginStart="24dp"/>
+        <TextView
+                android:text=":"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView4"
+                android:textColor="@android:color/background_light"
+                android:textSize="36sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/alarm_time_remaining" android:layout_marginBottom="16dp"/>
+
+        <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayTransparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/textView4"
+                app:layout_constraintBottom_toTopOf="@+id/alarm_time_remaining"
+                app:layout_constraintVertical_bias="0.84000003"/>
+
+        <TextView
+                tools:text="La alarma sonará en 30 minutos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarm_time_remaining"
+                android:textSize="@dimen/default_font_size"
+                android:textColor="@android:color/background_light"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent" android:gravity="center"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

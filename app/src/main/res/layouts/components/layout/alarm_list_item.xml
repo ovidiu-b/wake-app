@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="alarm"
+                type="com.weikappinc.weikapp.data.entities.Alarm"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/recyclerview_item_height"
+            style="@style/ViewWithRippleEfectTheme"
+            android:background="@color/colorPrimaryDark"
+            tools:ignore="UnusedAttribute">
+
+        <Switch
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="@{alarm.isActivated}"
+                android:id="@+id/alarmOnOff" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="@color/colorTurquoiseMedium"
+                android:padding="10dp" android:layout_marginEnd="8dp"/>
+
+        <TextView
+                tools:text="Early exaaam access and I am gonna suspednd"
+                android:text="@{alarm.description}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/alarmDescription"
+                app:layout_constraintTop_toTopOf="@+id/hourAlarm"
+                app:layout_constraintStart_toEndOf="@+id/hourAlarm"
+                android:layout_marginStart="18dp"
+                android:textSize="@dimen/heading_3"
+                android:layout_marginTop="4dp"
+                android:textColor="@android:color/background_light"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginEnd="8dp" app:layout_constraintEnd_toStartOf="@+id/alarmOnOff"/>
+        <TextView
+                android:id="@+id/hourAlarm"
+                app:alarmTime="@{alarm}"
+                tools:text="6:20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/big_text"
+                android:textColor="@color/colorTurquoiseMedium"
+                android:layout_marginStart="18dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                tools:text="Mon, 18.07.18"
+                app:alarmFrequency="@{alarm.alarmFrequency}"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:id="@+id/alarmDate"
+                app:layout_constraintBottom_toBottomOf="@+id/hourAlarm"
+                app:layout_constraintStart_toEndOf="@+id/hourAlarm"
+                android:layout_marginStart="18dp"
+                android:layout_marginBottom="4dp"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="@dimen/default_font_size" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toStartOf="@+id/alarmOnOff"/>
+
+        <!--<androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:layout_constraintHorizontal_bias="0.0">
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

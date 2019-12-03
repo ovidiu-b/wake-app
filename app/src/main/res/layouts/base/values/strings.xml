@@ -1,0 +1,29 @@
+<resources>
+
+    <!--STRINGS FOR MENU FILES(TITLES) -->
+    <!--bottom_navigation_view_main.xml-->
+    <string name="action_alarms_title">Alarmas</string>
+    <string name="action_social_title">Social</string>
+    <string name="action_messages_title">Mensajes</string>
+    <string name="action_settings_title">Ajustes</string>
+
+
+    <!--EDIT TEXT HINTS-->
+    <!--activity_single_alarm.xmlxml-->
+    <string name="alarm_title_edit_text_hint">Título de la alarma</string>
+
+    <!--RecordAudioActivity-->
+    <string name="record_audio_activity_toolbar_title">Grabar audio</string>
+
+    <!--MainActivity-->
+    <!--FragmentToolbarTitles-->
+    <string name="alarms_fragment_toolbar_title">ALARMAS</string>
+    <string name="social_fragment_toolbar_title">SOCIAL</string>
+    <string name="messages_fragment_toolbar_title">MENSAJES</string>
+    <string name="settings_fragment_toolbar_title">CONFIGURACIÓN</string>
+
+    <!--MainActivityFragments-->
+    <!--AlarmsFragment-->
+    <string name="add_new_alarm_toolbar_title">AÑADIR ALARMA</string>
+    <string name="update_alarm_toolbar_title">ACTUALIZAR ALARMA</string>
+</resources>

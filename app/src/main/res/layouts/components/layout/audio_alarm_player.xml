@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/radius_corner_border_2"
+        app:cardBackgroundColor="@color/colorPrimaryDark_2"
+        style="@style/Widget.MaterialComponents.CardView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fabCustomSize="45dp"
+                app:maxImageSize="@dimen/fab_icon_size_medium"
+                android:src="@drawable/ic_library_music_white_32dp"
+                app:rippleColor="@color/colorRippleEffect"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/playAudio"
+                app:layout_constraintBottom_toBottomOf="@+id/playAudio"
+                app:layout_constraintEnd_toStartOf="@+id/playAudio"
+                android:id="@+id/chooseAudio"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:maxImageSize="@dimen/fab_icon_size_big"
+                android:src="@drawable/ic_play_arrow_white_32dp"
+                app:rippleColor="@color/colorRippleEffect"
+                android:clickable="true"
+                android:focusable="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/playAudio"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view"/>
+
+        <RelativeLayout
+                android:id="@+id/frameContainerFabVibrate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="@+id/playAudio"
+                app:layout_constraintTop_toTopOf="@+id/playAudio"
+                app:layout_constraintStart_toEndOf="@+id/playAudio" >
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="45dp"
+                    app:maxImageSize="@dimen/fab_icon_size_medium"
+                    android:src="@drawable/ic_vibration_white_32dp"
+                    app:rippleColor="@color/colorRippleEffect"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/disableVibrating"/>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fabCustomSize="45dp"
+                    app:maxImageSize="@dimen/fab_icon_size_medium"
+                    android:src="@drawable/ic_do_not_disturb_white_24dp"
+                    app:rippleColor="@color/colorRippleEffect"
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/enableVibrating"/>
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline2"
+                                                    android:orientation="horizontal"
+                                                    app:layout_constraintGuide_percent=".15"/>
+        <TextView
+                android:text="Michael Jackson - Moonlight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/audioName"
+                android:textColor="@android:color/background_light" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textAlignment="center"
+                android:textSize="@dimen/default_font_size"
+                app:layout_constraintBottom_toTopOf="@+id/view2"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayTransparent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0" app:layout_constraintBottom_toTopOf="@+id/songVolume"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="@+id/guideline2"
+                android:layout_marginBottom="8dp" android:id="@+id/view2"/>
+
+        <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/colorGrayTransparent"
+                app:layout_constraintTop_toBottomOf="@+id/songVolume" android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" android:id="@+id/view" android:layout_marginTop="8dp"/>
+        <SeekBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/songVolume"
+                android:paddingStart="9dp"
+                android:paddingEnd="9dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/guideline4"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/chooseAudio"
+                app:layout_constraintEnd_toEndOf="@+id/frameContainerFabVibrate"/>
+
+        <androidx.constraintlayout.widget.Guideline android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:id="@+id/guideline4"
+                                                    android:orientation="horizontal"
+                                                    app:layout_constraintGuide_percent="0.55"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

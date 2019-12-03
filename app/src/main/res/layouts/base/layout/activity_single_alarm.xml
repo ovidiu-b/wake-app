@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        tools:context=".activities.SingleAlarmActivity">
+
+    <data>
+        <variable
+                name="title"
+                type="String"/>
+    </data>
+
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+
+        <include
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                layout="@layout/toolbar_close_title_ok"
+                bind:title="@{title}"/>
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/toolbar"
+                android:weightSum="100"
+                android:orientation="vertical">
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="7"
+                         android:paddingStart="16dp"
+                         android:paddingEnd="16dp"
+                         android:layout_marginBottom="16dp">
+                <EditText
+                        android:id="@+id/alarmDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="textCapSentences"
+                        android:ems="10"
+                        android:imeOptions="actionDone"
+                        android:textColor="@color/colorTurquoiseMedium"
+                        android:textAlignment="center"
+                        android:hint="@string/alarm_title_edit_text_hint"
+                        style="@style/Widget.AppCompat.EditText"
+                        android:background="@drawable/edit_text_border_rounded_1"
+                        android:textColorHint="@color/colorGrayDark"
+                        android:textSize="@dimen/heading_3"/>
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="45"
+                         android:layout_marginBottom="16dp"
+                         android:paddingStart="16dp"
+                         android:paddingEnd="16dp">
+
+                <include layout="@layout/time_picker"/>
+
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="13"
+                         android:layout_marginBottom="16dp"
+                         android:paddingStart="16dp"
+                         android:paddingEnd="16dp">
+
+                <include layout="@layout/day_picker"/>
+
+            </FrameLayout>
+
+            <FrameLayout android:layout_width="match_parent"
+                         android:layout_height="0dp"
+                         android:layout_weight="35"
+                         android:paddingStart="16dp"
+                         android:paddingEnd="16dp"
+                         android:paddingBottom="16dp">
+
+                <include layout="@layout/audio_alarm_player"/>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</layout>

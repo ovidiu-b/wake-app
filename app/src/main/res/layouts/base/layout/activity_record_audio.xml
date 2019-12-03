@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:bind="http://schemas.android.com/apk/res-auto"
+        tools:context=".activities.SingleAlarmActivity">
+
+    <data>
+        <variable
+                name="viewModel"
+                type="com.weikappinc.weikapp.view_models.record_audio_activity.RecordAudioViewModel"/>
+
+        <variable
+                name="recordAudioListener"
+                type="com.weikappinc.weikapp.RecordAudioListener"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimaryDark">
+
+        <include
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                layout="@layout/toolbar_close_title_ok"
+                bind:title="@{viewModel.toolbarTitle}"/>
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                    android:id="@+id/bottomAppBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.BottomAppBar.Colored"
+                    android:layout_gravity="bottom"
+                    app:fabCradleMargin="@dimen/space_between_fab_app_bot_bar"
+                    app:fabAlignmentMode="center"
+                    app:backgroundTint="@color/colorAccent">
+
+            </com.google.android.material.bottomappbar.BottomAppBar>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/recordBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_mic_white_32dp"
+                    android:onClick="@{(view) -> recordAudioListener.onRecordButtonClicked(view)}"
+                    app:layout_anchor="@id/bottomAppBar"
+                    app:maxImageSize="@dimen/fab_icon_size_big"
+                    app:rippleColor="@color/colorRippleEffect"
+                    android:clickable="true"
+                    android:focusable="true"/>
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
